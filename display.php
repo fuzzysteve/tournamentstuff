@@ -32,7 +32,7 @@ if (isset($_GET['series']) and is_numeric($_GET['series'])) {
 }
 
 
-$statsurl="https://public-crest.eveonline.com/tournaments/".$tournament."/series/".$series."/matches/0/";
+$statsurl="https://crest-tq.eveonline.com/tournaments/".$tournament."/series/".$series."/matches/0/";
 
 $statsdata=file_get_contents($statsurl);
 
@@ -57,7 +57,7 @@ foreach ($decoded->ships as $ship) {
     $ships[$id]=array("id"=>$id,"type"=>$type,"pilot"=>$pilot,"typeid"=>$typeid);
 }
 
-$initialframeurl="https://public-crest.eveonline.com/tournaments/".$tournament."/series/".$series."/matches/0/realtime/0/";
+$initialframeurl="https://crest-tq.eveonline.com/tournaments/".$tournament."/series/".$series."/matches/0/realtime/0/";
 $initialframe=file_get_contents($initialframeurl);
 $decodedframe=json_decode($initialframe);
 
@@ -115,7 +115,7 @@ foreach ($ships as $ship) {
  var camera,scene;
  var frame=1;
  var follow=0;
- var url="https://public-crest.eveonline.com/tournaments/<?php echo $tournament ?>/series/<?php echo $series ?>/matches/0/realtime/";
+ var url="https://crest-tq.eveonline.com/tournaments/<?php echo $tournament ?>/series/<?php echo $series ?>/matches/0/realtime/";
             function onDocumentLoad()
             {
                 ccpwgl.setResourcePath('res', 'https://web.ccpgamescdn.com/ccpwgl/res/');

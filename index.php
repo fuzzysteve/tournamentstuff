@@ -46,7 +46,7 @@ function renderList(data)
 
 
 
-NEOurl="https://public-crest.eveonline.com/tournaments/4/series/";
+NEOurl="https://crest-tq.eveonline.com/tournaments/4/series/";
 
 
 $.getJSON(NEOurl,function(data) {renderList(data)});
